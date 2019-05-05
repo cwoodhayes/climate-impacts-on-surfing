@@ -1,0 +1,5 @@
+# Ignore EVERYTHING except for the .bib and .tex files
+**/*
+!*.bib
+!*.tex
+!.gitignore
