@@ -3,6 +3,12 @@
 \usepackage{graphicx}
 \graphicspath{{img/}}
 \usepackage{natbib}
+\usepackage{gensymb}
+\usepackage[margin=0.5in]{geometry}
+%prevent LaTeX from shitting itself whenever there's a url with an underscore in it
+% stolen from https://tex.stackexchange.com/questions/383678/underscore-in-bibtex-url
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
 
 \title{Surf's Up: The Impact of Climate Change on Southern California Coastal Recreation}
 \author{Conor Hayes \thanks{Written for Prof. Lowell Stott's course \textit{CORE103: Climate Challenges}, at the University of Southern California.}}
@@ -40,22 +46,43 @@
 
 	Surfing breaks are relatively rare, measured as a percentage of coastline, due in large part to the small range of acceptable values for the four characteristics listed above. Of primary importance to our discussion is that these wave characteristics are entirely determined by the natural environment which creates the surf break. In particular, the following three factors, when combined, control the characteristics listed above to make or break a surfing wave: \citep{surfing-science}
 	\begin{itemize}
-		\item Coastal ocean floor bathymetry
 		\item Swell magnitude and direction (the dominant direction of propagation for incoming waves)
+		\item Coastal ocean floor bathymetry
 		\item Coastal wind direction and magnitude
 	\end{itemize}
-	The aim of this paper is to describe the predicted effects of climate change on the three factors above in Southern California, and thereby predict the future of surfing in a changing world. It is the hope of the author that the methodology described in this paper can be re-used in other regions to a similar effect.
+	The aim of this paper is to describe the predicted effects of climate change on the three factors above in Southern California, and thereby predict the future of surfing in the region. Southern California was chosen because of its status as a surfing mecca, because of its population density and economic importance, and because of the unusual availability of longitudinal water and wave data from the region. It is the hope of the author that the methodology described in this paper can be re-used in other regions once similar long-term observational data can be collected.
 
 	\section{Methods}
-	Convince the reader to take me seriously. Waves are big, bro.
-	\subsection{Coastal ocean floor bathymetry}
+	This paper takes a broad survey of the existing literature on the surf-influencing climate factors listed above, and reproduces their methods and results here, along with some original analysis. 
 
 	\subsection{Swell magnitude and direction}
+	In order to provide a broad understanding of the future changes in Southern California's surfable swells, this paper draws from \citet{swells-deep-water-waves} and \citet{swells-aleutian-low}. In the first, \citeauthor{swells-deep-water-waves} attempt to describe and explain existing wave dynamics within the Southern California Bight, which is the roughly concave region of coastline extending from San Diego to Point Conception. The authors assimilate existing data from a variety of sources: 5 hindcast studies of the northern Pacific Ocean, NOAA buoy data from the last 30 years, systematic beach-based visual estimates, and energy-frequency spectrum data from wave measurement arrays near the shore. They then treat the data to a statistical analysis in search of correlations with known climatological factors--in particular, the Aleutian Low, the El Ni\~{n}o Southern Oscillation (ENSO), and the Pacific Decadal Oscillation (PDO)--as well as correlations with specific swell directions and topographical features of the coast. In addition to empirical data collection and analysis, the authors use a modeling approach called SWAN to determine the total energy delivered to the coastline from a variety of swell events. SWAN uses typical atmospheric and wind conditions during particular storm events as initial conditions for a wave propogation model ending with ocean waves breaking upon the shore. \citep{swells-deep-water-waves}
+
+	In the second article, \citeauthor{swells-aleutian-low} use a CMIP5 model to predict the response of the Aleutian Low to global climate change. The authors analyze three sets of simulations: a preindustrial control simulation with atmospheric $CO_2$ fixed at 280ppm; a modern control simulation in which atmospheric measurements over the last century are used as as forcings for the coupled model; and a projection run which follows RCP8.5 from 2000 until 2050. They informed the second simulation using 20th-century observational data of the North Pacific Index (NPI), an area-weighted average of sea level barometric pressure (SLP) over the region bounded by 30\degree –65\degree N and 160\degree E–140\degree W. The authors then confirmed the results of the CMIP5 modeling using a CAM3.1-RGO model, which is a coupled atmospheric-ocean model previously used to successfully model ENSO and tropical oceanic processes. \citep{swells-aleutian-low}
+
+	\subsection{Coastal ocean floor bathymetry}
+	Predicted changes in ocean floor topography and depth are referenced from the aforementioned \citet{swells-deep-water-waves} as well as \citet{bath-cosmos}. The latter predicts long-term shoreline evolution in Southern California with climate change using CoSMoS, a physics-based numerical modeling tool that uses knowledge of local bathymetry, topography, and hydrodynamics as well as global climate forcings. Its initial shoreline data is extracted from LIDAR surveys, as well as USGS National and Regional Assessments. The CoSMoS model also incorporates fluvial discharge measurements, as well as modeled currents and waves (using SWAN, the same model used by \citet{swells-deep-water-waves}), to predict the effect on sediment transport. Its eventual output is a coastline shape as a function of time, over the next 100 years. 
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\textwidth]{img/cosmos_SLR_method.png}
+		\caption{CoSMos calculates flood level as the mean sea level added to the local SLR, tides, seasonal effects, storm surges, and movement of individual waves. \citep{bath-cosmos}}
+	\end{figure} 
 
 	\subsection {Coastal wind direction and magnitude}
+	This paper's analysis of wind direction and magnitude is informed by \citet{winds-coastal} and \citet{winds-santa-ana}, who describe the two primary sources of westerly and easterly winds, respectively, in Southern California. The former article attempts to verify the "Bakun Hypothesis" made in 1990, which predicted that increasing GHG concentrations would intensify upwelling-favorable winds in eastern ocean-boundary current systems like the coast of California. A meta-analysis of 22 separate studies of wind trends in these regions between 1990 and 2012 was then conducted, and the resulting database was statistically analyzed to test the null hypothesis of upwelling winds increasing or decreasing with equal probility. While the article's meta-analysis also covers other eastern boundary current systems off the Chilean, Spanish, and South African coasts, the section of their article dealing with the California system is of primary interest to this paper. \citep{winds-coastal}
+
+	The latter article \citep{winds-santa-ana} attempts to predict the changes in the Santa Ana winds (SAW), which are the strongest easterly winds of Southern California, and which help drive its wildfire season. The authors developed a statistical model to downscale low-resolution global climate model (GCM) pressure gradient data into the higher-resolution data needed to describe and predict the SAW. They trained their model on measurements of the SAW taken over the last 50 years, then selected 8 GCM's from the CMIP5 set for their ability to predict key aspects of the California climate. For each of these GCM's, they then generated predictions for the next 100 years using forcings from RCP8.5. \citep{winds-santa-ana}
 
 	\section{Results}
-	What the paper found. \cite{swells-deep-water-waves}
+	
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.75\textwidth]{img/winds_coastal_ebcs.png}
+		\caption{\citep{winds-coastal}}
+	\end{figure}
+
 
 	\section {Discussion}
 	Where I weave the data together into a narrative and explain why that narrative makes sense.
