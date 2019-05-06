@@ -2,10 +2,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \graphicspath{{img/}}
+\usepackage{natbib}
 
 \title{Surf's Up: The Impact of Climate Change on Southern California Coastal Recreation}
 \author{Conor Hayes \thanks{Written for Prof. Lowell Stott's course \textit{CORE103: Climate Challenges}, at the University of Southern California.}}
 \date{April 2019}
+
+% help out the natbib package a bit
+\def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
 
 \begin{document}
 	\maketitle
@@ -15,11 +19,40 @@
 	\end{abstract}
 
 	\section{Introduction}
+	The effects of climate change on coastal environments is an area of vital interest to scientists and laypeople alike. However, coastal effects are also among the most difficult to study and model, due to both the complexity of the air-sea-land interface, and the relative absence of longitudinal time-series data on coastal waves and the subsurface sea dynamics that produce them. \citep{swells-deep-water-waves}. This means that the effects of climate change on the many stakeholders of the world's coastal regions are comparatively unstudied and unknown. \citep{swells-deep-water-waves}
 
+	Among these many stakeholders are surfers and other water recreation-seekers. In the United States alone, surfing directly contributed \$7.48B to the economy in 2008, after increasing 14\% over the previous 4 years. \citep{surfing-value-to-society} In addition to this measurable benefit, surfing contributes to the economy indirectly as a key element of local and global culture. In California, surfing was officially declared the state sport in 2018 \citep{surfing-official-sport} and is a core element of the state's global image. Surfers themselves have long served as stewards of the coastal oceans and local environments, and have founded many of California's early coastal conservation movements. \citep{surfing-official-sport}.
+
+	The composition and formation of waves suitable for surfing aren't often formally studied, but are fairly well known. According to \citet{surfing-science}, four characteristics are informally considered by surfers when selecting a suitable surfing wave (or "break"): 
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{img/wave_elements.png}
+		\caption{A viable surfing wave viewed from above. Its large $\alpha$ value means it breaks slowly and from left-to-right when viewed from shore.\citep{surfing-science}}
+	\end{figure} 
+
+	\begin{itemize}
+		\item $H_B$: Wave height, measured from the crest to the trough of the wave.
+		\item $\alpha$: Wave peel angle--the acute angle formed between the wave crest and the shore. This determines how quickly the wave will break. Greater values of $\alpha$ will make a slower-breaking wave.
+		\item $B_I$: Wave breaking intensity. This is primarily determined by the seabed gradient orthogonal to the crest, and determines whether the wave will spill, collapse, or break (as is preferred by surfers).
+		\item $S_L$: Wave section length. This describes the length of wave crest before a discontinuity in any of the three characteristics above--and thus wave behavior--occurs, and helps to determine the sort of maneuvers surfers can perform.
+	\end{itemize}
+
+	Surfing breaks are relatively rare, measured as a percentage of coastline, due in large part to the small range of acceptable values for the four characteristics listed above. Of primary importance to our discussion is that these wave characteristics are entirely determined by the natural environment which creates the surf break. In particular, the following three factors, when combined, control the characteristics listed above to make or break a surfing wave: \citep{surfing-science}
+	\begin{itemize}
+		\item Coastal ocean floor bathymetry
+		\item Swell magnitude and direction (the dominant direction of propagation for incoming waves)
+		\item Coastal wind direction and magnitude
+	\end{itemize}
+	The aim of this paper is to describe the predicted effects of climate change on the three factors above in Southern California, and thereby predict the future of surfing in a changing world. It is the hope of the author that the methodology described in this paper can be re-used in other regions to a similar effect.
 
 	\section{Methods}
 	Convince the reader to take me seriously. Waves are big, bro.
-	\cite{surfing-science}
+	\subsection{Coastal ocean floor bathymetry}
+
+	\subsection{Swell magnitude and direction}
+
+	\subsection {Coastal wind direction and magnitude}
 
 	\section{Results}
 	What the paper found. \cite{swells-deep-water-waves}
@@ -30,6 +63,6 @@
 	\section {Conclusion}
 	In the end, what does that narrative imply for the reason why the reader should care about this article.
 
-	\bibliographystyle{plain}
+	\bibliographystyle{plainnat}
 	\bibliography{final_paper_cwhayes}
 \end{document}	
