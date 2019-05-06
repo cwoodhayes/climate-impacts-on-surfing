@@ -9,6 +9,7 @@
 % stolen from https://tex.stackexchange.com/questions/383678/underscore-in-bibtex-url
 \usepackage[hidelinks]{hyperref}
 \usepackage[T1]{fontenc}
+\usepackage{wrapfig}
 
 \title{Surf's Up: The Impact of Climate Change on Southern California Coastal Recreation}
 \author{Conor Hayes \thanks{Written for Prof. Lowell Stott's course \textit{CORE103: Climate Challenges}, at the University of Southern California.}}
@@ -21,7 +22,7 @@
 	\maketitle
 
 	\begin{abstract}
-		This is the text of my abstract. TODO: fill this in.
+		Surfing is a vital part of the economy and cultural identity of Southern California. But as the global climate undergoes significant changes over the next century, the future of the sport, and of the iconic surf breaks upon which it depends, is in some doubt. In order to provide an initial assay of surfing's future, this paper attempts to survey the effects of climate change on the most important environmental characteristics of surf breaks: swells, ocean floor topography, and wind forcing. Increases in mean wave height and power, as well as changing dominant swell direction, will make for short-term gains in surfability, but may also mean the degradation of the coastline and the conditions breaks are able to support. In addition, the wind conditions which both generate waves far offshore and interfere the waves as they break on the shore are expected to produce increasingly poor surfing conditions as the century progresses. Overall, expected changes in the climate will likely result in a short-term increase of surfability in the Southern California coast, but may spell trouble for the sport later on in the 21st century.
 	\end{abstract}
 
 	\section{Introduction}
@@ -56,7 +57,14 @@
 	This paper takes a broad survey of the existing literature on the surf-influencing climate factors listed above, and reproduces their methods and results here, along with some original analysis. 
 
 	\subsection{Swell magnitude and direction}
-	In order to provide a broad understanding of the future changes in Southern California's surfable swells, this paper draws from \citet{swells-deep-water-waves} and \citet{swells-aleutian-low}. In the first, \citeauthor{swells-deep-water-waves} attempt to describe and explain existing wave dynamics within the Southern California Bight, which is the roughly concave region of coastline extending from San Diego to Point Conception. The authors assimilate existing data from a variety of sources: 5 hindcast studies of the northern Pacific Ocean, NOAA buoy data from the last 30 years, systematic beach-based visual estimates, and energy-frequency spectrum data from wave measurement arrays near the shore. They then treat the data to a statistical analysis in search of correlations with known climatological factors--in particular, the Aleutian Low, the El Ni\~{n}o Southern Oscillation (ENSO), and the Pacific Decadal Oscillation (PDO)--as well as correlations with specific swell directions and topographical features of the coast. In addition to empirical data collection and analysis, the authors use a modeling approach called SWAN to determine the total energy delivered to the coastline from a variety of swell events. SWAN uses typical atmospheric and wind conditions during particular storm events as initial conditions for a wave propogation model ending with ocean waves breaking upon the shore. \citep{swells-deep-water-waves}
+	In order to provide a broad understanding of the future changes in Southern California's surfable swells, this paper draws from \citet{swells-deep-water-waves} and \citet{swells-aleutian-low}. In the first, \citeauthor{swells-deep-water-waves} attempt to describe and explain existing wave dynamics within the Southern California Bight (SCB), which is the roughly concave region of coastline extending from San Diego to Point Conception. The authors assimilate existing data from a variety of sources: 5 hindcast studies of the northern Pacific Ocean, NOAA buoy data from the last 30 years, systematic beach-based visual estimates, and energy-frequency spectrum data from wave measurement arrays near the shore. They then treat the data to a statistical analysis in search of correlations with known climatological factors--in particular, the Aleutian Low, the El Ni\~{n}o Southern Oscillation (ENSO), and the Pacific Decadal Oscillation (PDO)--as well as correlations with specific swell directions and topographical features of the coast. In addition to empirical data collection and analysis, the authors use a modeling approach called SWAN to determine the total energy delivered to the coastline from a variety of swell events. SWAN uses typical atmospheric and wind conditions during particular storm events as initial conditions for a wave propogation model ending with ocean waves breaking upon the shore. \citep{swells-deep-water-waves}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.5\textwidth]{img/swells_scb_directions.png}
+		\caption{Orientations for the six major wave types occurring in the SCB. (1) Aleutian low, (2) Pineapple Express, (3) northwest swell, (4) tropical storm, (5) Southern Hemisphere swell, and (6) local sea breeze.\citep{swells-deep-water-waves}}
+		\label{fig:swell_direction}
+	\end{figure}
 
 	In the second article, \citeauthor{swells-aleutian-low} use a CMIP5 model to predict the response of the Aleutian Low to global climate change. The authors analyze three sets of simulations: a preindustrial control simulation with atmospheric $CO_2$ fixed at 280ppm; a modern control simulation in which atmospheric measurements over the last century are used as as forcings for the coupled model; and a projection run which follows RCP8.5 from 2000 until 2050. They informed the second simulation using 20th-century observational data of the North Pacific Index (NPI), an area-weighted average of sea level barometric pressure (SLP) over the region bounded by 30\degree –65\degree N and 160\degree E–140\degree W. The authors then confirmed the results of the CMIP5 modeling using a CAM3.1-RGO model, which is a coupled atmospheric-ocean model previously used to successfully model ENSO and tropical oceanic processes. \citep{swells-aleutian-low}
 
@@ -70,26 +78,61 @@
 	\end{figure} 
 
 	\subsection {Coastal wind direction and magnitude}
-	This paper's analysis of wind direction and magnitude is informed by \citet{winds-coastal} and \citet{winds-santa-ana}, who describe the two primary sources of westerly and easterly winds, respectively, in Southern California. The former article attempts to verify the "Bakun Hypothesis" made in 1990, which predicted that increasing GHG concentrations would intensify upwelling-favorable winds in eastern ocean-boundary current systems like the coast of California. A meta-analysis of 22 separate studies of wind trends in these regions between 1990 and 2012 was then conducted, and the resulting database was statistically analyzed to test the null hypothesis of upwelling winds increasing or decreasing with equal probility. While the article's meta-analysis also covers other eastern boundary current systems off the Chilean, Spanish, and South African coasts, the section of their article dealing with the California system is of primary interest to this paper. \citep{winds-coastal}
+	This paper's analysis of wind direction and magnitude is informed by \citet{winds-coastal} and \citet{winds-santa-ana}, who describe the two primary sources of westerly and easterly winds, respectively, in Southern California. The former article attempts to verify the "Bakun Hypothesis" made in 1990, which predicted that increasing GHG concentrations would intensify upwelling-favorable winds in eastern ocean-boundary current systems (ECBS's) like the coast of California. A meta-analysis of 22 separate studies of wind trends in these regions between 1990 and 2012 was then conducted, and the resulting database was statistically analyzed to test the null hypothesis of upwelling winds increasing or decreasing with equal probility. While the article's meta-analysis also covers other eastern boundary current systems off the Chilean, Spanish, and South African coasts, the section of their article dealing with the California system is of primary interest to this paper. \citep{winds-coastal}
 
 	The latter article \citep{winds-santa-ana} attempts to predict the changes in the Santa Ana winds (SAW), which are the strongest easterly winds of Southern California, and which help drive its wildfire season. The authors developed a statistical model to downscale low-resolution global climate model (GCM) pressure gradient data into the higher-resolution data needed to describe and predict the SAW. They trained their model on measurements of the SAW taken over the last 50 years, then selected 8 GCM's from the CMIP5 set for their ability to predict key aspects of the California climate. For each of these GCM's, they then generated predictions for the next 100 years using forcings from RCP8.5. \citep{winds-santa-ana}
 
-	\section{Results}
-	
-	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=.75\textwidth]{img/winds_coastal_ebcs.png}
-		\caption{\citep{winds-coastal}}
+		\includegraphics[width=.5\textwidth]{img/winds_saw_direction.png}
+		\caption{\citep{winds-santa-ana}}
 	\end{figure}
 
+	\section{Results}
+	\subsection{Swell magnitude and direction}
 
-	\section {Discussion}
-	Where I weave the data together into a narrative and explain why that narrative makes sense.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.4\textwidth]{img/swells_aleutian_vs_pinapple.png}
+		\caption{\citep{swells-deep-water-waves}}
+		\label{fig:aleutian_vs_pineapple}
+	\end{figure}
 
-	\section {Conclusion}
-	In the end, what does that narrative imply for the reason why the reader should care about this article.
+	Of the wave types listed in Figure~\ref{fig:swell_direction}, the Aleutian low (labelled as 1 and 2) generates by far the most significantly portion of the average energy flux incident on the SCB. However, the Aleutian low itself shifts southward during El Ni\~no years, causing the "Pineapple Express" waves listed in the figure as (2). Although the total incident energy from the Pinapple Express waves and the "normal" northerly Aleutian low waves is similar, the amount of wave energy that actually reaches the coast from the Pinapple Express swell is approx. 320\% that of the normal Aleutian low. \citep{swells-deep-water-waves} As is visually apparent in Figure~\ref{fig:aleutian_vs_pineapple}, the SWAN model indicates that this is due to the shielding effect of the Channel Islands, combined with the slight southward tilt of the SCB.
 
+	The Aleutian low itself is predicted to increase in intensity over the next 50 years, according to \citeauthor{swells-aleutian-low}. Figure \ref{fig:aleutian_npi_change}.b depicts the anomaly between the 2050 low and the current low, displaying a multimodel ensemble mean (MMEM) loss of 140Pa across the region in the RCP8.5 scenario, which is 62\% larger than the unforced internal variability of the low. Twelve of the 22 models used show a southward movement of the center of the low (defined roughly as its point of minimum pressure), while the remaining 10 show the center moving north, indicating an uncertain change in its latitudinal position. \citep{swells-aleutian-low}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.4\textwidth]{img/swells_aleutian_npi_change.jpeg}
+		\caption{\citep{swells-deep-water-waves}}
+		\label{fig:aleutian_npi_change}
+	\end{figure}
+
+	\subsection{Coastal ocean floor bathymetry}
+	\citeauthor{bath-cosmos} predict increased retreat rates for all modeled stretches of the SCB coastline under RCP8.5 forcings. Large swaths of the Santa Monica region in particular are expected to retreat at approx. 1 m/yr, indicating significant changes to both underwater and abovewater topography. Under a 20mm/yr SLR scenario, portions of the Camp Pendleton coast (which includes the iconic beach breaks of San Onofre) are expected to retreat at over 4 m/yr.
+	Significant changes will also be occurring in California's bays and lowland coastlines. Figure \ref{fig:slr_los_angeles} shows the flood map of Los Angeles after 150cm of SLR, which depicts much of the LA harbor and nearby areas well inside the flooding zone. \citep{bath-cosmos}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.4\textwidth]{img/bath_slr_los_angeles.png}
+		\caption{\citep{bath-cosmos}}
+		\label{fig:slr_los_angeles}
+	\end{figure}
+
+	\subsection {Coastal wind direction and magnitude}
+	\citeauthor{winds-santa-ana} predict a gradual decrease in SAW intensity over the next 50 years, with a particularly pronounced attenuation of SAW frequency and intensity in the tails of the wind season (-32\% MMEM reduction in March and October). December will see the least attenuation, according to nearly all models, meaning that peak SAW season will be earlier in the year. The results also indicated a strong correlation between reduction in SAW and a drop in the pressure gradient force (PGF) pushing outward from the western side of the Rocky Mountains on SAW days. Generally, easterly, onshore winds in Southern California will reduce significantly over the course of the 21st century under RCP8.5. \citep{winds-santa-ana}
+
+	On the other hand, the meta-analysis conducted by \citeauthor{winds-coastal} indicates that Southern California's westerly winds, stemming from the California EBCS, are already increasing under climate change. Both model and observational data agree that for the California system, upwelling (warm-season) average wind speeds will increase by nearly 5mph over the course of the next half-century during the warm season, and a less significant increase overall. \citep{winds-coastal}
+
+	\section {Discussion and Conclusion}
+	With regards to swell magnitude and direction, the strengthened Aleutian low coupled with the increased frequency and magnitude of the ENSO \citep{bath-el-nino} will lead to stronger, more frequent Pinapple Express waves into the Southern California Bight, increasing mean wave height and the frequency of large swells--a positive result in the short-term for surfers. However, the increased net energy flux brings along with it a significantly increased coastal erosion rate, as modeled by \citeauthor{bath-cosmos} and referenced by \citeauthor{swells-deep-water-waves}. According to \citeauthor{swells-deep-water-waves}, "[Due primarily to the PDO], we expect to see a systematic decrease in beach sediment with time, resulting in exposure of the coastal bedrock (platforms and sea cliffs) to wave attack." This gradual loss may result in the degradation of existing breaks over the course of the 21st century. 
+
+	Meanwhile, the wind forecast is quite unfavorable for the surf industry as climate change progresses. Offshore winds--in this case, coming from the west--are a detriment to surfing waves, forcing them to collapse or tumble rather than to break, rendering them undesirable for all but the most basic surfing. Onshore winds--here, from the east--serve the opposite function, in moderation--propping waves up and slowing them down for a more accessible, workable ride. \citep{surfing-science} The expected decrease of the Santa Ana winds (easterlies) coupled with the increase of the offshore EBCS winds will make for consistently worse surf over the course of this century. An additional consequence of increased upwelling winds in the California eastern boundary current system will likely result in colder waters, especially during the warm season\citep{winds-coastal}--a truly unwanted consequence in the already chilly eastern Pacific.
+
+	Overall, the short-term prognosis for surfing in SoCal is bright, but long-term the costs will outweigh the benefits. It may be worth investigating methods to protect the most historic and beloved breaks in California over the next half-century, before they are degraded beyond recovery and their benefits to our culture and economy are lost.
+
+	\pagebreak
 	\bibliographystyle{plainnat}
 	\bibliography{final_paper_cwhayes}
 \end{document}	
